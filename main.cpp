@@ -26,7 +26,7 @@ int main() {
             cout << "ERROR, " << error1.what();
         }
         for (const auto x: inventario) {
-            cout <<"Producto: " << x->getNombre()<<": "<< x->getPrecioBase() << endl;
+            cout <<"Producto: " << x->getNombre()<<": "<< x->calcularPrecioFinal() << endl;
         }
         CajaEnvio<shared_ptr<Producto>> cajas;
         cajas.agregarElemento(e1);
