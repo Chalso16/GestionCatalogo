@@ -10,13 +10,14 @@ using namespace std;
 int main() {
     try {
         vector<shared_ptr<Producto>> inventario;
-        shared_ptr<Producto> e1 = make_shared<Electronica>("1234ABC", "Iphone", 999.99, 1, 0.21);
+        shared_ptr<Electronica> e1 = make_shared<Electronica>("1234ABC", "Iphone", 999.99, 1, 0.21);
         inventario.push_back(e1);
-        shared_ptr<Producto> e2 = make_shared<Electronica>("4321CBA", "Samsung", 899.99, 10, 0.21);
+        shared_ptr<Electronica> e2 = make_shared<Electronica>("4321CBA", "Samsung", 899.99, 10, 0.21);
+        --(*e2);
         inventario.push_back(e1);
-        shared_ptr<Producto> r1 = make_shared<Ropa>("9876XYZ", "Camiseta", 30.95, 10, "XL", 4.95);
+        shared_ptr<Ropa> r1 = make_shared<Ropa>("9876XYZ", "Camiseta", 30.95, 10, "XL", 4.95);
         inventario.push_back(r1);
-        shared_ptr<Producto> r2 = make_shared<Ropa>("4545QRS", "Pantalon", 44.95, 12, "L", 9.95);
+        shared_ptr<Ropa> r2 = make_shared<Ropa>("4545QRS", "Pantalon", 44.95, 12, "L", 9.95);
         inventario.push_back(r2);
 
         try {
