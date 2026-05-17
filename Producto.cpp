@@ -81,6 +81,3 @@ void Producto::vender(int cantidad) {
     setStock(getStock() - cantidad);
 }
 
-double Producto::calcularPrecioFinal() const {
-    return precioBase*3;
-}

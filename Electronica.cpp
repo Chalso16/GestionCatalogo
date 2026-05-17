@@ -36,13 +36,13 @@ void Electronica::setImpuesto(const double &impuesto) {
 }
 
 //sobrecarga
-Electronica Electronica::operator--() {
+Electronica& Electronica::operator--() {
     setStock(getStock()-1);
     return *this;
 }
 
 //Post decremento
-Electronica Electronica::operator--(int) {
+Electronica& Electronica::operator--(int) {
     Electronica obj = *this;
     setStock(getStock()-1);
     return obj;

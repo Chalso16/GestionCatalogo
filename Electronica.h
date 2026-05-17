@@ -22,8 +22,8 @@ public:
     //setters
     void setImpuesto(const double& impuesto);
     //sobrecarga
-    Electronica operator--();
-    Electronica operator--(int);
+    Electronica& operator--();
+    Electronica& operator--(int);
     //metodos
     double calcularPrecioFinal() const override;
     // void vender(int cantidad) override;
